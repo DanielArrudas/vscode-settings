@@ -1,0 +1,75 @@
+{
+    // Editor Settings
+    "editor.fontFamily": "Jetbrains Mono",
+    "editor.fontSize": 16,
+    "editor.lineHeight": 1.8,
+    "editor.rulers": [80, 120],
+    "editor.renderLineHighlight": "gutter",
+    "editor.fontLigatures": true,
+    "editor.semanticHighlighting.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "phase",
+
+    // Workbench & Explorer
+    "workbench.editor.labelFormat": "short",
+    "workbench.colorTheme": "SynthWave '84",
+    "workbench.iconTheme": "symbols",
+    "workbench.startupEditor": "none",
+    "workbench.colorCustomizations": {},
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "symbols.hidesExplorerArrows": false,
+    "workbench.editorAssociations": {
+        "*.xlsx": "default"
+    },
+
+    // Terminal
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.shell.linux": "bash",
+    "terminal.integrated.showExitAlert": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.env.windows": {},
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+    // Files & Formatting
+    "files.autoSave": "afterDelay",
+    "files.associations": {
+        "*.php": "php"
+    },
+
+    // Extensions & Tools
+    "extensions.autoCheckUpdates": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "cmake.showOptionsMovedNotification": false,
+    "laravel-pint.enable": true,
+
+    // Git & GitLens
+    "git.enableSmartCommit": true,
+    "gitlens.ai.model": "vscode",
+
+    // Prettier
+    "prettier.tabWidth": 4,
+    "prettier.bracketSameLine": true,
+    "prettier.withNodeModules": true,
+    "prettier.singleQuote": true,
+    "workbench.settings.applyToAllProfiles": ["prettier.singleQuote"],
+
+    // PHP
+    "php.validate.executablePath": "",
+    "[php]": {
+        "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+    },
+
+    // GitHub Copilot
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
+}
