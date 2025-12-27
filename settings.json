@@ -1,5 +1,5 @@
 {
-    // Editor Settings
+    // --- Editor Settings ---
     "editor.fontFamily": "Jetbrains Mono",
     "editor.fontSize": 16,
     "editor.lineHeight": 1.8,
@@ -11,13 +11,20 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorBlinking": "phase",
+    "editor.inlineSuggest.enabled": true,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
 
-    // Workbench & Explorer
+    // --- Workbench & Explorer ---
     "workbench.editor.labelFormat": "short",
-    "workbench.colorTheme": "SynthWave '84",
-    "workbench.iconTheme": "symbols",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
     "workbench.colorCustomizations": {},
+    "workbench.settings.applyToAllProfiles": [
+        "prettier.singleQuote",
+        "gitlens.ai.generateCommitMessage.customInstructions"
+    ],
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
@@ -25,8 +32,10 @@
     "workbench.editorAssociations": {
         "*.xlsx": "default"
     },
+    "diffEditor.codeLens": true,
+    "diffEditor.ignoreTrimWhitespace": false,
 
-    // Terminal
+    // --- Terminal ---
     "terminal.integrated.fontSize": 18,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
     "terminal.integrated.shell.linux": "bash",
@@ -35,41 +44,40 @@
     "terminal.integrated.env.windows": {},
     "terminal.integrated.defaultProfile.windows": "Git Bash",
 
-    // Files & Formatting
+    // --- Files & Language Specifics ---
     "files.autoSave": "afterDelay",
     "files.associations": {
-        "*.php": "php"
+        "*.jsx": "typescriptreact"
     },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "css.validate": false,
 
-    // Extensions & Tools
-    "extensions.autoCheckUpdates": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.donotVerifyTags": true,
-    "cmake.showOptionsMovedNotification": false,
-    "laravel-pint.enable": true,
-
-    // Git & GitLens
+    // --- Git & GitLens ---
     "git.enableSmartCommit": true,
-    "gitlens.ai.model": "vscode",
+    "git.autofetch": "all",
+    "gitlens.ai.model": "gemini:gemini-2.5-flash",
+    "gitlens.ai.generateCommitMessage.customInstructions": "Generate a concise summary commit (in english) based on the \"semantic commits\", with this structure: <type>[optional scope]: <description>. (First line is 50 characters or less. Then a blank line. Remaining text should be of a maximum of 72 characters.) Examples of types: feat - Commits of type feat indicate that your code snippet is including a new feature (it relates to the MINOR version in semantic versioning).  fix - Commits of type fix indicate that your committed code snippet is solving a problem (bug fix), (it relates to the PATCH version in semantic versioning).  docs - Commits of type docs indicate that there were changes to the documentation, such as in the repository's Readme. (Does not include changes to code).  test - Commits of type test are used when changes are made to tests, whether creating, altering, or deleting unit tests. (Does not include changes to code).  build - Commits of type build are used when modifications are made to build files and dependencies.  perf - Commits of type perf are for identifying any code changes that are related to performance.  style - Commits of type style indicate that there were changes related to code formatting, semicolons, trailing spaces, lint... (Does not include changes to code).  refactor - Commits of type refactor refer to changes due to refactoring that do not alter its functionality, such as a change in how a certain part of the screen is processed, but which maintained the same functionality, or performance improvements due to a code review.  chore - Commits of type chore indicate updates to build tasks, admin configurations, packages... such as adding a package to gitignore. (Does not include changes to code).  ci - Commits of type ci indicate changes related to continuous integration.  raw - Commits of type raw indicate changes related to configuration files, data, features, parameters.  cleanup - Commits of type cleanup are used to remove commented-out code, unnecessary snippets, or any other form of cleaning up the source code, aiming to improve its readability and maintainability.  remove - Commits of type remove indicate the deletion of obsolete or unused files, directories, or functionalities, reducing the project's size and complexity and keeping it more organized.",
 
-    // Prettier
+    // --- Prettier ---
     "prettier.tabWidth": 4,
     "prettier.bracketSameLine": true,
     "prettier.withNodeModules": true,
     "prettier.singleQuote": true,
-    "workbench.settings.applyToAllProfiles": ["prettier.singleQuote"],
+    "prettier.jsxSingleQuote": true,
 
-    // PHP
-    "php.validate.executablePath": "",
-    "[php]": {
-        "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
-    },
+    // --- Extensions & Tools ---
+    "extensions.autoCheckUpdates": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "emmet.triggerExpansionOnTab": true,
+    "tailwindCSS.emmetCompletions": true,
 
-    // GitHub Copilot
+    // --- GitHub Copilot ---
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "plaintext": false,
         "markdown": false,
         "scminput": false
-    }
+    },
+    "github.copilot.nextEditSuggestions.enabled": true
 }
